@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* 이서윤체 폰트 적용을 위한 코드 */
+      @font-face {
+        font-family: "LeeSeoyun";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* body태그 자체에 css 요소 부여 */
+        body {
+            font-family: "LeeSeoyun";
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-image: url("./background.png");
+        }
+
+        .container {
+            width: 390px;
+            background-color: skyblue;
+            height: 100%;
+        }
+
+        .photos {
+            margin-top: 30px;
+        }
+
+        .photo-frame {
+            background-color: white;
+            margin: 15px 20px;
+            height: 200px;
+
+            background-size: cover;
+            position: relative;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+
+        .f-title {
+            color: white;
+            font-size: 35px;
+            font-weight: 900;            
+        }
+
+        .f-date {
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        #image1 {
+            background-image: url('./Mom1.jpg');
+        }
+
+        #image2 {
+            background-image: url('./Mom2.jpg');
+        }
+
+        #image3 {
+            background-image: url('./Mom3.jpg');
+        }
+
+        #image4 {
+            background-image: url('./Mom4.jpg');
+        }
+
+        .photo_description {
+            color: white;
+            background-color: skyblue;
+
+            width: fit-content;
+            padding: 0 20px;
+            margin-bottom: 10px; 
+            
+            
+            position: absolute;
+            top: 0;
+
+            transform: translate(-50%)
+            left: 50%;
+        }
+
+        .video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photos">
+            <div id="image1" class="photo-frame">
+                <span id="desc1" class="photo_description">
+                    석양을 느끼며 저녁 식사
+                </span>
+            </div>
+            <div id="image2" class="photo-frame">
+                <span id="desc2" class="photo_description">
+                    카페에서 여유로운 휴식
+                </span>
+            </div>
+            <div class="photo-frame">
+                <iframe
+                    src="https://www.youtube.com/embed/jk6iSwyvvjQ"
+                    frameborder="0"
+                    class="video"
+                ></iframe>
+            </div>
+            <div id="image4" class="photo-frame">
+                <span id="desc4" class="photo_description">
+                    유람선에서의 낮잠
+                </span>
+            </div>
+        </div>
+        <div class="footer">
+            <P class="f-title">LAOS 라오스 여행</P>
+            <p class="f-date">2019년 9월</p>
+        </div>
+    </div>
+</body>
+</html>
